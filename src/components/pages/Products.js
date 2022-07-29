@@ -1,10 +1,13 @@
 import React from 'react'
 import '../../App.css'
+import Budget from '../product/Budget'
 
 function Products() {
   return (
-    <h1 className='products'>Products</h1>
-  )
+      <div className='pieChart'>
+        <Budget/>
+      </div>
+    )
 }
 
 export default Products

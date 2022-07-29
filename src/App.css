@@ -42,3 +42,8 @@
     color: #fff;
     font-size: 100px;
   }
+
+  .pieChart {
+    width: 30%;
+    margin: 2%;
+  }
