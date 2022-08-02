@@ -5,6 +5,18 @@ video {
     position: fixed;
     z-index: -1;
   }
+
+  #selection  {
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: black;
+  }
+
+  #selection td {
+    padding: 5px;
+  }
   
   .hero-container {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */

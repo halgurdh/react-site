@@ -5,8 +5,9 @@ import Home from './components/pages/Home'
 import Products from './components/pages/Products';
 import Services from './components/pages/Services';
 import Signup from './components/pages/Signup';
+import { Component } from 'react';
 
-function App() {
+function App () {
   return (
     <div className="App">
       <Router>

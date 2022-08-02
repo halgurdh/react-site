@@ -10,21 +10,25 @@ function HeroSection() {
       <h1>ADVENTURE AWAITS</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+        <form id='selection'>
+          <table>
+         <tr>
+          <td><label for="origin">Van</label></td>
+          <td><label for="destination">Naar</label></td>
+          <td><label for="vertrekdatum">Vertrek</label></td>
+          <td><label for="terugdatum">Terug</label></td>
+          <td><label for="terugdatum">Aantal personen</label></td>
+         </tr>
+         <tr>
+         <td><input id='origin' type='text'/></td>
+         <td><input id='destination' type='text'/></td>
+         <td><input id='vertrekdatum' type='date'/></td>
+         <td><input id='terugdatum' type='date'/></td>
+         <td><input id='aantal' type='number'/></td>
+         </tr>
+          </table>
+        </form>
+        
       </div>
     </div>
   );
