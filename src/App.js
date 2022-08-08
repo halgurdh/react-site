@@ -5,7 +5,7 @@ import Home from './components/pages/Home'
 import Products from './components/pages/Products';
 import Services from './components/pages/Services';
 import Signup from './components/pages/Signup';
-import { Component } from 'react';
+import StripeContainer from './components/pages/StripeContainer';
 
 function App () {
   return (
@@ -17,6 +17,7 @@ function App () {
         <Route path='/products' element={<Products/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/sign-up' element={<Signup/>} />
+        <Route path='/stripecontainer' element={<StripeContainer/>} />
         </Routes>
       </Router>
 

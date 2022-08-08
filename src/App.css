@@ -42,3 +42,31 @@
     color: #fff;
     font-size: 100px;
   }
+  
+  .Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .FormRow {
+    margin: 0 20px 25px;
+    padding: 0;
+    border-style: none;
+    will-change: opacity, transform;
+    box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
+  
+  .tableData {
+    width: 150px;
+  }
+
+  .StripeElement--webkit-autofill {
+    background: transparent !important;
+  }
+  
+  .StripeElement {
+    width: 100%;
+    padding: 11px 15px 11px 0;
+  }
