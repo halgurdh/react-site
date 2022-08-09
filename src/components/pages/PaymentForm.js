@@ -1,42 +1,18 @@
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
-import axios from "axios"
 import React, { useState } from 'react'
 import '../../App.css'
 
 
 export default function PaymentForm() {
     const [success, setSuccess ] = useState(false)
-    const stripe = useStripe()
-    const elements = useElements()
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        const {error, paymentMethod} = await stripe.createPaymentMethod({
-            type: "ideal",
-            card: elements.getElement(CardElement)
-        })
-
-
-    if(!error) {
-        try {
-            const {id} = paymentMethod
-            const response = await axios.post("http://localhost:4000/payment", {
-                amount: 1000,
-                id
-            })
-
-            if(response.data.success) {
-                console.log("Successful payment")
-                setSuccess(true)
-            }
-
-        } catch (error) {
-            console.log("Error", error)
+    function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        if(re.test(email)) {
+            console.log("true email")
         }
-    } else {
-        console.log(error.message)
+        return re.test(email);
     }
-}
 
     return (
         <>
@@ -48,34 +24,14 @@ export default function PaymentForm() {
                         <tr><label>
                             Naam
                         </label></tr>
-                        <tr><input type ='text'/></tr>
-                        
+                        <tr><input id='name' type ='text' placeholder="Tom de Jong"/></tr>
+                   
                         <tr><label>
-                            Achternaam
+                            email
                         </label></tr>
-                        <tr><input type ='text'/></tr>
-                        <tr><label>
-                            Straat
-                        </label></tr>
-                        <tr><input type ='text'/></tr>
-                        <tr><label>
-                            Nummer
-                        </label></tr>
-                        <tr><input type ='number'/></tr>
-                        <tr><label>
-                            Toevoeging
-                        </label></tr>
-                        <tr><input type ='text'/></tr>
-                        <tr><label>
-                            PostCode
-                        </label></tr>
-                        <tr><input type ='text'/></tr>
-                        <tr><label>
-                            Plaats
-                        </label></tr>
-                        <tr><input type ='text'/></tr>
+                        <tr><input id='email' type ='text' placeholder="tom.de.jong@gmail.com"/></tr>
                         <br/>
-                        <button>Pay</button>
+                        <button type='submit' onClick={handleSubmit}>Pay</button>
                     </td>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import Home from './components/pages/Home'
 import Products from './components/pages/Products';
 import Services from './components/pages/Services';
 import Signup from './components/pages/Signup';
-import StripeContainer from './components/pages/StripeContainer';
+import PaymentForm from './components/pages/PaymentForm';
 
 function App () {
   return (
@@ -17,7 +17,7 @@ function App () {
         <Route path='/products' element={<Products/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/sign-up' element={<Signup/>} />
-        <Route path='/stripecontainer' element={<StripeContainer/>} />
+        <Route path='/paymentform' element={<PaymentForm/>} />
         </Routes>
       </Router>
 
