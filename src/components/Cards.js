@@ -3,8 +3,6 @@ import './Cards.css';
 import CardItem from './CardItem';
 
 import { useState } from 'react';
-import StripeContainer from './pages/StripeContainer';
-
 
 function Cards() {
   
